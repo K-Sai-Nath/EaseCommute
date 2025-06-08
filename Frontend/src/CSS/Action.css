@@ -1,0 +1,23 @@
+.nav{
+display: flex;
+justify-content: space-between;
+}
+.nav img{
+    height: 100px;
+    width:100px;
+    cursor: pointer;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.nav p{
+font-size: 30px;
+margin-right: 20px;
+}
+.overall{
+height: 100vh;
+display: flex;
+flex-direction: column;
+}

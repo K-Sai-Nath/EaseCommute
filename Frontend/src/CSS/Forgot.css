@@ -1,0 +1,19 @@
+#forgot1 {
+    background: none;
+    border: none;
+    color: white;  
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+#forgot1:hover {
+    color: #4B0082; 
+    text-decoration: none;
+}
+
+#forgot1:focus {
+    outline: none;
+}
