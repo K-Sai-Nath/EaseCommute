@@ -15,10 +15,9 @@ const Register=()=>{
     const navigate=useNavigate()
     const handleSignUp=async (event)=>{
         event.preventDefault()
-        const API_KEY = "8bb78daca323487995e89b9bce21bd74";  
+        const API_KEY =  process.env.REACT_APP_API_KEY;  
         const url = `https://api.zerobounce.net/v2/validate?api_key=${API_KEY}&email=${email}`;
         const emailcheck=await axios.get(url);
-        console.log(emailcheck.data)
         if (emailcheck.data.status!=='valid'){
             return alert("Invalid email")
         }

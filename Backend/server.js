@@ -6,13 +6,15 @@ const cors=require('cors');
 app.use(cors());
 app.use(express.json())
 app.use("/api/auth",authRoutes);
-mongoose.connect("mongodb://localhost:27017/Users",{useNewUrlParser:true,useUnifiedTopology: true })
+require('dotenv').config();
+mongoose.connect(process.env.MONGO_DB_URL,{useNewUrlParser:true,useUnifiedTopology: true })
 .then(()=>{
     console.log("DB Connected");
 })
 .catch((err)=>{
     console.log(err);
 })
-app.listen(9000,()=>{
+const PORT = process.env.PORT || 9000;
+app.listen(PORT,()=>{
     console.log("Server Started");
 })
