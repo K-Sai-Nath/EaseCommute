@@ -12,8 +12,8 @@ const Forgot_Password= async (req,res)=>{
     const transporter =nodemailer.createTransport({
         service:"gmail",
         auth: {
-            user:"risrithreddy9704319026@gmail.com", 
-            pass:"iyzk hoxz ywin knuw",  
+            user:process.env.USER_NAME, 
+            pass:process.env.PASSWORD,  
         },
     });
 
