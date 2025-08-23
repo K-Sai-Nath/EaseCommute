@@ -10,6 +10,9 @@ app.use(
 );
 app.use(express.json());
 app.use("/api/auth", authRoutes);
+app.get("/", (req, res) => {
+  res.send("Connected");
+});
 require("dotenv").config();
 mongoose
   .connect(process.env.MONGO_DB_URL, {
